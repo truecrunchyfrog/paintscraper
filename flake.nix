@@ -11,8 +11,6 @@
         buildInputs = with pkgs; [
           elixir
           elixir-ls
-          typst
-          tinymist
         ];
       };
     }
