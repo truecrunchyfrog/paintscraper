@@ -1,4 +1,4 @@
-defmodule Vendor.Nordsjo do
+defmodule Paintscraper.Vendor.Nordsjo do
   require Logger
   @behaviour Vendor
 

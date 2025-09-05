@@ -1,4 +1,4 @@
-defmodule Vendor.FarrowAndBall do
+defmodule Paintscraper.Vendor.FarrowAndBall do
   require Logger
   @behaviour Vendor
 

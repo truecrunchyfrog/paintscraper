@@ -1,4 +1,4 @@
-defmodule Vendor.Jotun do
+defmodule Paintscraper.Vendor.Jotun do
   require Logger
   @behaviour Vendor
 

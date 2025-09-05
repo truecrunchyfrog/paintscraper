@@ -1,4 +1,4 @@
-defmodule Color do
+defmodule Paintscraper.Color do
   defstruct [
     :vendor_color_code,
     :hex_color_code,

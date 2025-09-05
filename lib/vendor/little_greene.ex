@@ -1,4 +1,4 @@
-defmodule Vendor.LittleGreene do
+defmodule Paintscraper.Vendor.LittleGreene do
   require Logger
   require Floki
   @behaviour Vendor
