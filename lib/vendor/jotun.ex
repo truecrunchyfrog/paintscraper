@@ -1,6 +1,6 @@
 defmodule Paintscraper.Vendor.Jotun do
   require Logger
-  @behaviour Vendor
+  @behaviour Paintscraper.Vendor
 
   @impl true
   def vendor_name, do: "Jotun"
@@ -62,7 +62,7 @@ defmodule Paintscraper.Vendor.Jotun do
         "link" => relative_url,
         "images" => images
       }) do
-    %Color{
+    %Paintscraper.Color{
       vendor_color_code: vendorCode,
       hex_color_code: hexCode,
       vendor: __MODULE__,

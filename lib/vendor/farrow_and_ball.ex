@@ -1,6 +1,6 @@
 defmodule Paintscraper.Vendor.FarrowAndBall do
   require Logger
-  @behaviour Vendor
+  @behaviour Paintscraper.Vendor
 
   @impl true
   def vendor_name, do: "Farrow & Ball"
@@ -41,7 +41,7 @@ defmodule Paintscraper.Vendor.FarrowAndBall do
   defp directory_url, do: URI.append_path(base_url(), "/paint/all-paint-colours")
 
   defp html_tree_to_color(tree, url) do
-    %Color{
+    %Paintscraper.Color{
       vendor_color_code:
         tree
         |> Floki.find(".product-top-info-code > span")

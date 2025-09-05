@@ -1,6 +1,6 @@
 defmodule Paintscraper.Vendor.Nordsjo do
   require Logger
-  @behaviour Vendor
+  @behaviour Paintscraper.Vendor
 
   @impl true
   def vendor_name, do: "Nordsjö"
@@ -44,7 +44,7 @@ defmodule Paintscraper.Vendor.Nordsjo do
       "colorDescription" => description
     },
     image_urls) do
-    %Color{
+    %Paintscraper.Color{
       vendor_color_code: vendorCode,
       hex_color_code: hexCode,
       vendor: __MODULE__,

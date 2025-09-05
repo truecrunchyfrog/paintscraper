@@ -1,7 +1,7 @@
 defmodule Paintscraper.Vendor.LittleGreene do
   require Logger
   require Floki
-  @behaviour Vendor
+  @behaviour Paintscraper.Vendor
 
   @impl true
   def vendor_name, do: "Little Greene"
@@ -29,7 +29,7 @@ defmodule Paintscraper.Vendor.LittleGreene do
   defp directory_url, do: URI.append_path(base_url(), "/paint")
 
   defp html_tree_to_color(tree, url) do
-    %Color{
+    %Paintscraper.Color{
       vendor_color_code:
         case tree
         |> Floki.find(".paint_number")
