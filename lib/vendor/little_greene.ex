@@ -8,7 +8,7 @@ defmodule Paintscraper.Vendor.LittleGreene do
 
   @impl true
   def colors(request \\ Req.new()) do
-    Logger.info("Fetching color URLs from directory")
+    Logger.info("Fetching color URLs from directory: #{directory_url()}")
     color_urls =
       Req.get!(request, url: directory_url()).body
       |> Floki.parse_document!()

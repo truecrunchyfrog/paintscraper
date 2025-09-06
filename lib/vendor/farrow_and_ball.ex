@@ -7,7 +7,7 @@ defmodule Paintscraper.Vendor.FarrowAndBall do
 
   @impl true
   def colors(request \\ Req.new()) do
-    Logger.info("Fetching color URLs from paged directory")
+    Logger.info("Fetching color URLs from paged directory: #{directory_url()}")
     color_urls =
       directory_paged_stream(request, directory_url())
       |> Enum.flat_map(&Floki.attribute(&1.body |> Floki.parse_document!(), ".product-item-name > a", "href"))

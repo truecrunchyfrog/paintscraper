@@ -7,7 +7,7 @@ defmodule Paintscraper.Vendor.Nordsjo do
 
   @impl true
   def colors(request \\ Req.new()) do
-    Logger.info("Fetching color metadata from directory")
+    Logger.info("Fetching color metadata from directory: #{directory_url()}")
     color_objects =
       Req.get!(request, url: directory_url()).body
       |> Floki.parse_document!()
