@@ -13,6 +13,7 @@ defmodule Paintscraper.Vendor.LittleGreene do
       Req.get!(request, url: directory_url()).body
       |> Floki.parse_document!()
       |> Floki.attribute(".lgpc-product-card__title > a", "href")
+      |> Enum.uniq()
       
     color_urls
     |> Task.async_stream(fn
